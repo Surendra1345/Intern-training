@@ -1,0 +1,18 @@
+create table users(id serial primary key,name varchar(100) not null,phone_no varchar(15) unique not null,email varchar(100) not null unique );
+insert into users(name,phone_no,email)values('Surendra','6303023283','surendrareddy49175@gmail.com'),('Manvitha','9900887766','manvitha@gmail.com'),('Suri','8899007766','suri234@gmail.com'),('Manasa','8877990066','manasa@gmail.com'),('Revathi','9182713822','revathi@gmail.com');
+select * from users;
+select * from  users where phone_no='9900887766';
+select * from users order by name DESC;
+Update users set email='surendra@gmail.com' where phone_no='6303023283';
+select * from users;
+select count(*) from users;
+select * from users where name Like '%a';
+Alter table users add column age int;
+Update users set age=21 where id=1;
+Update users set age=20 where id=2;
+Update users set age=21 where id=3;
+Update users set age=22 where id=4;
+Update users set age=24 where id=5;
+select * from users;
+select * from users where age  between 20 and 23;
+select name from users where age between 21 and 23;
